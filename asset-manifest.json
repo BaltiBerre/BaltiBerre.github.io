@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/BaltiBerre.github.io/static/css/main.f855e6bc.css",
+    "main.js": "/BaltiBerre.github.io/static/js/main.30d09ef3.js",
+    "static/js/453.563f7601.chunk.js": "/BaltiBerre.github.io/static/js/453.563f7601.chunk.js",
+    "static/media/logo.svg": "/BaltiBerre.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/BaltiBerre.github.io/index.html",
+    "main.f855e6bc.css.map": "/BaltiBerre.github.io/static/css/main.f855e6bc.css.map",
+    "main.30d09ef3.js.map": "/BaltiBerre.github.io/static/js/main.30d09ef3.js.map",
+    "453.563f7601.chunk.js.map": "/BaltiBerre.github.io/static/js/453.563f7601.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.30d09ef3.js"
+  ]
+}
