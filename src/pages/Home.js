@@ -49,7 +49,7 @@ export const Home = () => {
           <div className={`${styles['hero-image']} slide-in-right`}>
             {/* Replace with actual image when you have one */}
             <div className={`${styles['hero-image']} slide-in-right`}>
-            <img src="/images/balti.jpeg" alt="Balti" className={styles['circular-image']} />
+            <img src="/images/Balti.jpeg" alt="Balti" className={styles['circular-image']} />
         </div>
           </div>
         </div>
