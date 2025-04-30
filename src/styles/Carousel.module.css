@@ -1,0 +1,129 @@
+.carousel {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-items-container {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .carousel-item.animating {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .nav-button {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  
+  .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #3b82f6;
+    transform: scale(1.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .nav-button {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .nav-button {
+      top: auto;
+      bottom: -60px;
+    }
+    
+    .prev-button {
+      left: 50%;
+      margin-left: -50px;
+    }
+    
+    .next-button {
+      right: 50%;
+      margin-right: -50px;
+    }
+    
+    .indicators {
+      margin-top: 70px;
+    }
+  }

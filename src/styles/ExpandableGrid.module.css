@@ -1,0 +1,249 @@
+/* src/styles/ExpandableGrid.module.css */
+.sectionContainer {
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .sectionTitle:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    bottom: -15px;
+    left: 20%;
+    background-color: #3b82f6;
+    border-radius: 2px;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Three column grid for Experience section */
+  @media (min-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gridContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Two column grid for Projects section */
+  .projectsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Make expanded cards take up full row */
+  .card.expanded {
+    grid-column: 1 / -1;
+    transition: all 0.4s ease;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  /* Remove expanded styles since we're using overlay */
+  .card:hover .toggleButton {
+    color: #2563eb;
+  }
+  
+  .cardHeader {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .cardHeader h3 {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    margin-bottom: 8px;
+  }
+  
+  .cardSubtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 4px;
+  }
+  
+  .cardMeta {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  
+  .cardPreview {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cardPreview p {
+    color: #4b5563;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .toggleButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #3b82f6;
+    font-weight: 500;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    align-self: flex-start;
+  }
+  
+  .toggleButton:hover {
+    color: #2563eb;
+  }
+  
+  .expandedContent {
+    padding: 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    overflow: visible;
+  }
+  
+  .expandedFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .expandedFlexContainer {
+      flex-direction: row;
+    }
+    
+    .contentSection {
+      flex: 2;
+    }
+    
+    .contentSidebar {
+      flex: 1;
+    }
+  }
+  
+  .contentSection {
+    margin-bottom: 20px;
+  }
+  
+  .contentSidebar .contentSection {
+    margin-bottom: 24px;
+  }
+  
+  .contentSection:last-child {
+    margin-bottom: 0;
+  }
+  
+  .contentSection h4 {
+    color: #4b5563;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .contentSection ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .contentSection li {
+    margin-bottom: 8px;
+    color: #4b5563;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  .contentSection li::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    left: -15px;
+    top: 10px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tag {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .cardActions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .githubButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .githubButton:hover {
+    background-color: #2563eb;
+    color: white;
+  }

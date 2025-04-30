@@ -1,38 +1,109 @@
+/* Global Styles */
 .App {
-  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+section {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 80px 0;
+  scroll-margin-top: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background-color: #60a5fa;
+  border-radius: 2px;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-in-right {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 60px 0;
   }
 }

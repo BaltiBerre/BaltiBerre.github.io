@@ -1,0 +1,274 @@
+.experience-section {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .experience-carousel {
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .section-title:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    bottom: -15px;
+    left: 20%;
+    background-color: #3b82f6;
+    border-radius: 2px;
+  }
+  
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto 40px;
+    min-height: 450px;
+  }
+  
+  .experience-card {
+    width: calc(100% - 100px);
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experience-card.animating {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .card-content {
+    padding-top: 20px;
+  }
+  
+  .nav-button {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .left-button {
+    left: 0;
+  }
+  
+  .right-button {
+    right: 0;
+  }
+  
+  .card-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .card-header h3 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    margin-bottom: 10px;
+  }
+  
+  .company {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 5px;
+  }
+  
+  .duration {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  .responsibilities {
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .responsibilities li {
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .responsibilities li::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    left: -15px;
+    top: 10px;
+  }
+  
+  .skills-section, .achievements-section {
+    margin-top: 20px;
+  }
+  
+  .skills-section h4, .achievements-section h4 {
+    color: #4b5563;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .achievements-section ul {
+    padding-left: 20px;
+  }
+  
+  .achievements-section li {
+    margin-bottom: 5px;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .achievements-section li::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    left: -15px;
+    top: 10px;
+  }
+  
+  .indicator-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .active-dot {
+    background-color: #3b82f6;
+    transform: scale(1.2);
+  }
+  
+  /* Animation for card transitions */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .experience-card {
+      width: calc(100% - 70px);
+      padding: 20px;
+    }
+    
+    .nav-button {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card-container {
+      min-height: 550px;
+    }
+    
+    .experience-card {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 20px;
+    }
+    
+    .nav-button {
+      top: auto;
+      bottom: -60px;
+    }
+    
+    .left-button {
+      left: 50%;
+      margin-left: -50px;
+    }
+    
+    .right-button {
+      right: 50%;
+      margin-right: -50px;
+    }
+    
+    .indicator-dots {
+      margin-top: 70px;
+    }
+    
+    .skills-tags {
+      gap: 5px;
+    }
+    
+    .skill-tag {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+    }
+  }
