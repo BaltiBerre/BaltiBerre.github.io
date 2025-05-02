@@ -1,249 +1,359 @@
 /* src/styles/ExpandableGrid.module.css */
 .sectionContainer {
-    padding: 80px 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .sectionTitle {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-    text-align: center;
-    display: inline-block;
-  }
-  
-  .sectionTitle:after {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 4px;
-    bottom: -15px;
-    left: 20%;
-    background-color: #3b82f6;
-    border-radius: 2px;
-  }
-  
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.sectionTitle:after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  bottom: -15px;
+  left: 20%;
+  background-color: #3b82f6;
+  border-radius: 2px;
+}
+
+/* Grid Container */
+.gridContainer {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Three column grid for Experience section */
+@media (min-width: 768px) {
   .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
-    width: 100%;
-    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Three column grid for Experience section */
-  @media (min-width: 768px) {
-    .gridContainer {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  @media (min-width: 1024px) {
-    .gridContainer {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* Two column grid for Projects section */
-  .projectsGrid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-  @media (min-width: 768px) {
-    .projectsGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* Make expanded cards take up full row */
-  .card.expanded {
-    grid-column: 1 / -1;
-    transition: all 0.4s ease;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e5e7eb;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px);
-  }
-  
-  /* Remove expanded styles since we're using overlay */
-  .card:hover .toggleButton {
-    color: #2563eb;
-  }
-  
-  .cardHeader {
-    padding: 20px;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .cardHeader h3 {
-    font-size: 1.5rem;
-    color: #3b82f6;
-    margin-bottom: 8px;
-  }
-  
-  .cardSubtitle {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #4b5563;
-    margin-bottom: 4px;
-  }
-  
-  .cardMeta {
-    font-size: 0.9rem;
-    color: #6b7280;
-  }
-  
-  .cardPreview {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .cardPreview p {
-    color: #4b5563;
-    margin-bottom: 16px;
-    line-height: 1.5;
-  }
-  
-  .toggleButton {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #3b82f6;
-    font-weight: 500;
-    padding: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.95rem;
-    align-self: flex-start;
-  }
-  
-  .toggleButton:hover {
-    color: #2563eb;
-  }
-  
-  .expandedContent {
-    padding: 20px;
-    background-color: #f8fafc;
-    border-top: 1px solid #e5e7eb;
-    overflow: visible;
-  }
-  
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.card:hover .toggleButton {
+  color: #2563eb;
+}
+
+.cardHeader {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.cardSubtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.cardMeta {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.cardPreview {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardPreview p {
+  color: #4b5563;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #3b82f6;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #f0f7ff;
+  border: 1px solid #e0e7ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  color: #2563eb;
+  background-color: #e0e7ff;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Modal Content */
+.modalContent {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  outline: none; /* Remove focus outline, we'll handle a11y separately */
+}
+
+/* Modal Header */
+.modalHeader {
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  background-color: #f8fafc;
+}
+
+.modalHeader h3 {
+  font-size: 1.75rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+/* Modal Body */
+.modalBody {
+  padding: 24px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Modal Footer */
+.modalFooter {
+  padding: 16px 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeModalButton {
+  padding: 10px 24px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.closeModalButton:hover {
+  background-color: #2563eb;
+}
+
+/* Expanded content container */
+.expandedFlexContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
   .expandedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  
-  @media (min-width: 768px) {
-    .expandedFlexContainer {
-      flex-direction: row;
-    }
-    
-    .contentSection {
-      flex: 2;
-    }
-    
-    .contentSidebar {
-      flex: 1;
-    }
+    flex-direction: row;
   }
   
   .contentSection {
-    margin-bottom: 20px;
+    flex: 2;
   }
   
-  .contentSidebar .contentSection {
-    margin-bottom: 24px;
+  .contentSidebar {
+    flex: 1;
   }
-  
-  .contentSection:last-child {
-    margin-bottom: 0;
+}
+
+.contentSection {
+  margin-bottom: 20px;
+}
+
+.contentSidebar .contentSection {
+  margin-bottom: 24px;
+}
+
+.contentSection:last-child {
+  margin-bottom: 0;
+}
+
+.contentSection h4 {
+  color: #4b5563;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.contentSection ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.contentSection li {
+  margin-bottom: 8px;
+  color: #4b5563;
+  line-height: 1.5;
+  position: relative;
+}
+
+.contentSection li::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  left: -15px;
+  top: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Modal Animation Classes */
+.modalEnter {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modalExit {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .contentSection h4 {
-    color: #4b5563;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+  to {
+    opacity: 1;
   }
-  
-  .contentSection ul {
-    padding-left: 20px;
-    margin-bottom: 16px;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  .contentSection li {
-    margin-bottom: 8px;
-    color: #4b5563;
-    line-height: 1.5;
-    position: relative;
+  to {
+    opacity: 0;
   }
-  
-  .contentSection li::before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #3b82f6;
-    left: -15px;
-    top: 10px;
+}
+
+.modalEnter .modalContent {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.modalExit .modalContent {
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .tag {
-    background-color: #e0e7ff;
-    color: #4f46e5;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .cardActions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-start;
+  to {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  
-  .githubButton {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #3b82f6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .githubButton:hover {
-    background-color: #2563eb;
-    color: white;
-  }
+}

@@ -13,23 +13,23 @@ const projectsData = [
       skills: [
         "User Story Mapping", "Timeline Planning", "Documentation", "Stakeholder Management", "Security Implementation"
       ],
-      github: "https://github.com/baltiberre/emr-project"
+      github: "https://github.com/BaltiBerre/emr"
     },
-    {
-      title: "Marketing Campaign Coordination Dashboard",
-      technologies: "React, Material UI, Firebase",
-      description: "A dashboard designed to help marketing teams coordinate campaigns across multiple channels. Provides timeline visualization, resource allocation tracking, and automatic detection of scheduling conflicts.",
-      pmHighlights: [
-        "Created a unified timeline view that aligned social media, email, and event marketing activities",
-        "Implemented a notification system for approaching deadlines and potential schedule conflicts",
-        "Built a task assignment and tracking module that improved team accountability",
-        "Developed a reporting module that visualizes campaign performance metrics"
-      ],
-      skills: [
-        "Marketing Workflow Design", "Timeline Visualization", "Cross-channel Coordination", "Performance Tracking"
-      ],
-      github: "https://github.com/baltiberre/campaign-coordinator"
-    },
+    // {
+    //   title: "Marketing Campaign Coordination Dashboard",
+    //   technologies: "React, Material UI, Firebase",
+    //   description: "A dashboard designed to help marketing teams coordinate campaigns across multiple channels. Provides timeline visualization, resource allocation tracking, and automatic detection of scheduling conflicts.",
+    //   pmHighlights: [
+    //     "Created a unified timeline view that aligned social media, email, and event marketing activities",
+    //     "Implemented a notification system for approaching deadlines and potential schedule conflicts",
+    //     "Built a task assignment and tracking module that improved team accountability",
+    //     "Developed a reporting module that visualizes campaign performance metrics"
+    //   ],
+    //   skills: [
+    //     "Marketing Workflow Design", "Timeline Visualization", "Cross-channel Coordination", "Performance Tracking"
+    //   ],
+    //   github: "https://github.com/baltiberre/campaign-coordinator"
+    // },
     {
       title: "Dependency Update Analyzer",
       technologies: "Neo4J, Cypher, Goblin Framework",
@@ -43,23 +43,23 @@ const projectsData = [
       skills: [
         "Research Planning", "Technical Documentation", "Data Analysis", "Presentation Development"
       ],
-      github: "https://github.com/baltiberre/dependency-analyzer"
+      github: "https://github.com/BaltiBerre/DependencyUpdateMaven"
     },
-    {
-      title: "Cross-Team Project Planner",
-      technologies: "JavaScript, React, Node.js, MongoDB",
-      description: "A collaborative planning tool designed specifically for campaigns that span multiple teams. Focuses on clear timeline visualization and dependency tracking to prevent bottlenecks.",
-      pmHighlights: [
-        "Designed and implemented a Gantt chart visualization that highlights cross-team dependencies",
-        "Created a resource allocation system that prevents overcommitment",
-        "Built automated notifications for timeline shifts that impact dependent tasks",
-        "Developed a reporting system that tracks planned vs. actual completion times"
-      ],
-      skills: [
-        "Dependency Mapping", "Resource Allocation", "Timeline Visualization", "Project Planning"
-      ],
-      github: "https://github.com/baltiberre/team-planner"
-    }
+    // {
+    //   title: "Cross-Team Project Planner",
+    //   technologies: "JavaScript, React, Node.js, MongoDB",
+    //   description: "A collaborative planning tool designed specifically for campaigns that span multiple teams. Focuses on clear timeline visualization and dependency tracking to prevent bottlenecks.",
+    //   pmHighlights: [
+    //     "Designed and implemented a Gantt chart visualization that highlights cross-team dependencies",
+    //     "Created a resource allocation system that prevents overcommitment",
+    //     "Built automated notifications for timeline shifts that impact dependent tasks",
+    //     "Developed a reporting system that tracks planned vs. actual completion times"
+    //   ],
+    //   skills: [
+    //     "Dependency Mapping", "Resource Allocation", "Timeline Visualization", "Project Planning"
+    //   ],
+    //   github: "https://github.com/baltiberre/team-planner"
+    // }
   ];
   
   export default projectsData;

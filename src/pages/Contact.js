@@ -62,7 +62,7 @@ export const Contact = () => {
       <div className="contact-content">
         <div className="contact-info slide-in-left">
           <h3>Contact Information</h3>
-          <p>Feel free to reach out if you're interested in my profile for project management roles.</p>
+          <p>Feel free to reach out if you're interested in my profile.</p>
           
           <div className="contact-methods">
             <div className="contact-method">

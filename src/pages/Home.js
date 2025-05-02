@@ -33,12 +33,12 @@ export const Home = () => {
         <div className={styles['hero-content']}>
           <div className={`${styles['hero-text']} slide-in-left`}>
             <h1>Baltasar Berretta</h1>
-            <h2>Project Coordinator & CS Student</h2>
+            <h2>Full-Stack Developer</h2>
             <p className={styles['hero-bio']}>
-              Born in Uruguay, raised in Brazil, and studying in the United States. 
-              I'm passionate about technology, human behavior, and bringing structure 
-              to creative processes. I specialize in coordinating projects, aligning teams, 
-              and ensuring deliverables stay on track.
+            Born in Uruguay, raised in Brazil, and studying in the U.S., I build scalable software from database to browser. 
+            With experience in Python, React, Node.js, and SQL, I develop full-stack systems that are secure, performant, and user-focused. 
+            Whether I’m optimizing API load times or refining frontend UX,
+            I focus on clean architecture and clear communication across teams.
             </p>
             <div className={styles['hero-buttons']}>
               <a href="#experience" className="btn btn-primary">View My Experience</a>
